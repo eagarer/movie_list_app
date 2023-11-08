@@ -3,15 +3,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import AuthService from "../../services/AuthService";
+// import axios from "axios";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    const values = { email, password };
+    const values = { username, password };
     console.log("values --> ", values);
 
     AuthService.login(values)
@@ -24,20 +25,41 @@ function Login() {
       .finally(()=> {
         console.log("Finnaly login");
       })
+
+    // axios
+    //   .post("https://movie-list-api-six.vercel.app/auth/login", values)
+    //   .then((res) => console.log("res --> ", res))
+    //   .catch((error) => console.log(error));
+
+
+      // fetch("https://movie-list-api-six.vercel.app/auth/login", {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(values)
+      // })
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     // Verileri işleyin
+      //     console.log(data);
+      //   })
+      //   .catch(error => {
+      //     console.error('Hata:', error);
+      //   });
   }
 
   return (
     <Container>
-      <Row>
-        <Col sm={8}></Col>
-        <Col sm={4}>
+      <Row className="justify-content-md-center">
+        <Col sm={3} className="off">
           <Form className="mt-5 pt-5" onSubmit={handleSubmit}>
-            <Form.Group className="mb-3 pt-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3 pt-3">
               <Form.Label>Email address</Form.Label>
               <Form.Control
-                type="email"
+                type="text"
                 placeholder="Enter email"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </Form.Group>
 
@@ -56,7 +78,7 @@ function Login() {
               Submit
             </Button>
           </Form>
-          {JSON.stringify(email)}
+          {JSON.stringify(username)}
           <br />
           {JSON.stringify(password)}
         </Col>
