@@ -26,33 +26,12 @@ function Login() {
         console.log("Finnaly login");
       })
 
-    // axios
-    //   .post("https://movie-list-api-six.vercel.app/auth/login", values)
-    //   .then((res) => console.log("res --> ", res))
-    //   .catch((error) => console.log(error));
-
-
-      // fetch("https://movie-list-api-six.vercel.app/auth/login", {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify(values)
-      // })
-      //   .then(response => response.json())
-      //   .then(data => {
-      //     // Verileri işleyin
-      //     console.log(data);
-      //   })
-      //   .catch(error => {
-      //     console.error('Hata:', error);
-      //   });
   }
 
   return (
     <Container>
       <Row className="justify-content-md-center">
-        <Col sm={3} className="off">
+        <Col sm={5} className="off">
           <Form className="mt-5 pt-5" onSubmit={handleSubmit}>
             <Form.Group className="mb-3 pt-3">
               <Form.Label>Email address</Form.Label>
