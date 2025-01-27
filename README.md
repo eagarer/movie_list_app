@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# React.js Projesi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, React.js kullanılarak geliştirilmiş bir web uygulamasıdır. React, kullanıcı arayüzleri oluşturmak için kullanılan popüler bir JavaScript kütüphanesidir.
 
-## Available Scripts
+## 🚀 Başlangıç
 
-In the project directory, you can run:
+Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-### `npm start`
+### 📌 Gereksinimler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Projeyi çalıştırmadan önce aşağıdaki yazılımların yüklü olduğundan emin olun:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (Önerilen sürüm: 16 veya üzeri)
+- [npm](https://www.npmjs.com/) veya [yarn](https://yarnpkg.com/)
 
-### `npm test`
+### 📥 Projeyi Klonlama
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+git clone https://github.com/kullaniciadi/proje-adi.git
+cd proje-adi
+```
 
-### `npm run build`
+### 📦 Bağımlılıkları Yükleme
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm install
+# veya
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🚀 Geliştirme Ortamında Çalıştırma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm start
+# veya
+yarn start
+```
 
-### `npm run eject`
+Bu komut, yerel bir geliştirme sunucusu başlatır ve genellikle `http://localhost:3000` adresinde çalışır.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🏗 Üretim İçin Derleme
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run build
+# veya
+yarn build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bu komut, uygulamanızı `/build` klasörüne optimize edilmiş bir şekilde derler.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Proje Yapısı
 
-## Learn More
+```
+proje-adi/
+│   README.md
+│   package.json
+│   .gitignore
+│
+├── src/
+│   ├── components/      # Bileşenler
+│   ├── pages/           # Sayfalar
+│   ├── context/         # Context API ile yönetilen durumlar
+│   ├── hooks/           # Özel hooklar
+│   ├── services/        # API çağrıları
+│   ├── utils/           # Yardımcı fonksiyonlar
+│   ├── App.js           # Ana uygulama bileşeni
+│   ├── index.js         # Uygulamanın giriş noktası
+│
+└── public/              # Statik dosyalar
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Kullanılan Teknolojiler
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React.js** - Kullanıcı arayüzleri oluşturmak için JavaScript kütüphanesi.
+- **React Router** - Sayfalar arasında yönlendirme için kullanılır.
+- **Redux Toolkit** (Opsiyonel) - Global state yönetimi için.
+- **Axios** - HTTP istekleri yapmak için.
+- **React Bootstrap / MUI / Tailwind CSS** - UI bileşenleri ve stillendirme için.
 
-### Code Splitting
+## 📜 Lisans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
 
-### Analyzing the Bundle Size
+## 🤝 Katkıda Bulunma
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Eğer projeye katkıda bulunmak isterseniz, bir **Pull Request (PR)** oluşturabilir veya bir **issue** açabilirsiniz. Her türlü katkı memnuniyetle karşılanır!
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Hazırlayan:** [İsim Soyisim](https://github.com/kullaniciadi)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
